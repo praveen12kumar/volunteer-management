@@ -22,13 +22,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 
-app.get('/', ()=>{
-    console.log("Express is working!");
-})
 
 app.use('/api/v1/events', eventRoutes);
 app.use('/api/v1/volunteers', volunteerRoutes);
 
+app.get('/', ()=>{
+    console.log("Express is working!");
+})
 
 
 app.use(errorHandler);

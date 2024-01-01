@@ -6,7 +6,7 @@ const eventRoutes = express.Router();
 
 eventRoutes.post('/new', addEvent);
 eventRoutes.get('/all', getAllEvents);
-eventRoutes.post('/:id', updateEvent)
+eventRoutes.put('/:id', updateEvent);
 eventRoutes.delete('/:id', deleteEvent);
 
 export default eventRoutes;

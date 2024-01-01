@@ -12,7 +12,6 @@ const addEvent = async(req, res)=>{
             })
         }
         const event = await Event.create(req.body);
-        console.log(event);
         res.status(201).json({
             success: true,
             message:"event added successfully",

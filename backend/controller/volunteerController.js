@@ -92,3 +92,7 @@ const deleteVolunteer = async (req, res)=>{
         })
     }
 }
+
+
+
+export {addVolunteer, getAllVolunteers, updateVolunteer, deleteVolunteer}
