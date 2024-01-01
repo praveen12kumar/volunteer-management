@@ -22,16 +22,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 
-app.use('/api/v1/events', eventRoutes);
-app.use('/api/v1/volunteers', volunteerRoutes);
-
-
-app.use(errorHandler);
-app.use(routeNotFound);
-
 app.get('/', ()=>{
     console.log("Express is working!");
 })
 
+app.use('/api/v1/events', eventRoutes);
+app.use('/api/v1/volunteers', volunteerRoutes);
+
+
+
+app.use(errorHandler);
+app.use(routeNotFound);
 
 export default app;
